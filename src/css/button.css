@@ -16,7 +16,6 @@
 
     background-size: contain;
     background-repeat: no-repeat;
-    float: right;
 }
 
 .edit{
@@ -25,6 +24,8 @@
     
     width: 5px;
     height: 5px;
+
+    float: right;
 }
 
 .erase{
@@ -33,4 +34,5 @@
     
     width: 5px;
     height: 5px;
+    float: right;
 }

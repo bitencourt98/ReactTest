@@ -10,6 +10,14 @@
 }
 
 .table{
-    border: 1px solid;
+    border-bottom: 1px solid;
+    padding: 5px;
+
     width: 100%;
+    
+}
+
+.table:hover{
+    /* font-style: italic; */
+    
 }

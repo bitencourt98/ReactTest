@@ -6,7 +6,6 @@ const Products = ({products}) => {
     console.log(products);
     return ( 
         <>
-            <p> testes produtos</p>
             {products.map(product => <Product product={product} />)}
         </>
      );
