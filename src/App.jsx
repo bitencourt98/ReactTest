@@ -19,7 +19,7 @@ const App = () => {
     },
   ])
 
-  return (
+  return  ( 
     <div>
       <div className="container">
         <AddTask />
