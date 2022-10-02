@@ -1,0 +1,11 @@
+.button{
+    background-color: #730FC3;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+    border: 0px solid purple;
+    border-radius: 5px;
+    min-width: 110px;
+    overflow: auto;
+}

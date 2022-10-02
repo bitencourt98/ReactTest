@@ -1,11 +1,15 @@
 import React from 'react';
 
-import "./css/app-container.css"
+import InputHead from './component/InputHead';
+import FormList from './component/FormList';
+
+import "./css/form-container.css"
 
 const App = () =>{
   return(
     <div className='formContainer'>
-      asdasd
+      <InputHead className='upperContainer' />
+      <FormList className='formList' />
     </div>
   )
 }
