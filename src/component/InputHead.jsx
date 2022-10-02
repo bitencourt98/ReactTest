@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import "../css/button.css"
 import "../css/inputHead.css"
 
-const InputHead = () => {
+const InputHead = ({handleProductAdd}) => {
+
+    const [inputDescription, setInputDescription] = useState('');
+    const [inputCurrency, setInputCurrency] = useState('');
     
-    function handleCurrency(capturedValue){
-        console.log(capturedValue.target.value)
-        //todo
+    const handleDescription = (capturedDescription) =>{
+        setInputDescription(capturedDescription.target.value);
+    }
+    
+    const handleCurrency = (capturedValue) =>{
+        setInputCurrency(capturedValue.target.value);
     }
 
-    function handleDescription(capturedDescription){
-        console.log(capturedDescription.target.value)
-        //todo
+    const handleAddProductButton = () => {
+        handleProductAdd(inputDescription, inputCurrency);
     }
+
     
     return ( 
         <div className='inputHead'>
-            <input onChange={handleDescription} className='input' type="text" placeholder='Descrição do produto' />
-            <input onChange={handleCurrency} className='input' type="number" min={0} max={9999.99} placeholder='Valor' />
-            <button className='button'>Adicionar</button>
+            <input value={inputDescription} onChange={handleDescription} className='input' type="text" placeholder='Descrição do produto' />
+            <input value={inputCurrency} onChange={handleCurrency} className='input' type="number" min={0} max={9999.99} placeholder='Valor' />
+            <button onClick={handleAddProductButton} className='button'>Adicionar</button>
         </div>
     );
 }
