@@ -1,9 +1,12 @@
 import React from 'react';
 
-const FormList = () => {
+import Products from './Products';
+
+const FormList = (products) => {
     return ( 
-        <>
-        </>
+        <div>
+            <Products products={products}/>
+        </div>
      );
 }
  
