@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import InputHead from "./component/InputHead";
-import FormList from "./component/FormList";
 
+import "./App.css"
 import "./css/form-container.css";
 import Products from "./component/Products";
 
@@ -11,12 +11,12 @@ const App = () => {
     {
       id: "1",
       description: "Mel de Laranjeira",
-      price: 15.8,
+      price: 15.85,
     },
     {
       id: "2",
       description: "Mel de Eucalipto",
-      price: 19.9,
+      price: 19.99,
     },
     {
       id: "3",
@@ -26,22 +26,22 @@ const App = () => {
     {
       id: "4",
       description: "Mel de Mandaçaia",
-      price: 58.0,
+      price: 58.75,
     },
   ]);
 
   return (
-    <div className="formContainer">
-      
-      <div>
-        <InputHead className="upperContainer" />
-      </div>
+    <>
+      <div className="formContainer">
+        <div>
+          <InputHead className="upperContainer" />
+        </div>
 
-      <div className="formList">
-        <Products products={products} />
+        <div className="formList">
+          <Products products={products} />
+        </div>
       </div>
-
-    </div>
+    </>
   );
 };
 

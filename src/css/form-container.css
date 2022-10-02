@@ -1,9 +1,15 @@
 .formContainer{
+    margin: auto;
+    padding: 45px;
+
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #FBE192;
-    margin: 100px 120px;
-    padding: 45px;
+    background-color: white;
+
+    max-width: 850px;
+    min-width: 300px;
+    height: auto;
+
 }
 
 .formList{

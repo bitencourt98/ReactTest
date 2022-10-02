@@ -1,0 +1,15 @@
+.item{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+}
+.price{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+.table{
+    border: 1px solid;
+    width: 100%;
+}
