@@ -6,12 +6,10 @@ import "../css/product-list.css";
 const Product = ({ product, handleProductRemove, handleProductUpdate }) => {
 
   const deleteProduct = () => {
-    console.log('delete product with id:'+product.id);
     handleProductRemove(product.id)
   }
   
   const editProduct = (id) => {
-    console.log('edit product with id:'+product.id);
     handleProductUpdate(product);
   }
 

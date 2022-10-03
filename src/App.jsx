@@ -35,6 +35,7 @@ const App = () => {
   ]);
 
   const handleProductAdd = (prodDescription, prodPrice) => {
+    console.log('adding new product: ', prodDescription, 'with value: ', prodPrice);
     const value = setIdValue(idValue.valueOf()+1);
     const newProduct = [ ... products,
       {
@@ -44,23 +45,27 @@ const App = () => {
       }];
 
       setProducts(newProduct);
+    console.log('end adding product!')
   }
   const handleProductRemove = (prodId) => {
-    console.log(prodId);
+    console.log('removing product: ', prodId);
+
     const updateProdList = products.filter( product => product.id !== prodId);
     
     setProducts(updateProdList);
+    console.log('Removed product!')
   }
   
   const handleProductUpdate = (product) => {
+    console.log('updating product: ', product.id);
+
     setValuesModal(product);
     setOpenModal(true);
   }
   
   const updateProduct = (prod) =>{
-
     let updateProdList = [...products]
-
+    
     updateProdList.forEach(element => {
       if (element.id === prod.id){
         element.description = prod.description;
@@ -69,8 +74,9 @@ const App = () => {
     });
     
     setProducts(updateProdList);
-
+    
     setOpenModal(false);
+    console.log('end update!')
   }
   
   const closeModal = () =>{
