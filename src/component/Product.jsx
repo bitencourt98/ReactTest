@@ -3,7 +3,7 @@ import React from "react";
 import "../css/button.css";
 import "../css/product-list.css";
 
-const Product = ({ product, handleProductRemove }) => {
+const Product = ({ product, handleProductRemove, handleProductUpdate }) => {
 
   const deleteProduct = () => {
     console.log('delete product with id:'+product.id);
@@ -12,7 +12,7 @@ const Product = ({ product, handleProductRemove }) => {
   
   const editProduct = (id) => {
     console.log('edit product with id:'+product.id);
-    // handleProductUpdate
+    handleProductUpdate(product);
   }
 
   return (

@@ -8,7 +8,8 @@ import Products from "./component/Products";
 import Modal from "./component/Modal";
 
 const App = () => {
-
+  const [valuesModal, setValuesModal] = useState();
+  const [isOpenModal, setOpenModal] = useState(false);
   const [idValue, setIdValue] = useState(5);
   const [products, setProducts] = useState([
     {
@@ -51,21 +52,25 @@ const App = () => {
     setProducts(updateProdList);
   }
 
-  const handleProductUpdate = (prodId, description) => {
-    // const updateProdList = products.filter( );
+  const handleProductUpdate = (product) => {
+    setValuesModal(product);
+    setOpenModal(true);
   }
-  // return ();
+
+  // const [valu]
 
   return (
     <>
-      <Modal />
+      {
+        isOpenModal ? <Modal product = {valuesModal} /> : null
+      }
       <div className="formContainer">
         <div>
           <InputHead className="upperContainer" handleProductAdd={handleProductAdd}/>
         </div>
 
         <div className="formList">
-          <Products products={products} handleProductRemove={handleProductRemove}/>
+          <Products products={products} handleProductRemove={handleProductRemove} handleProductUpdate={handleProductUpdate}/>
         </div>
       </div>
     </>
