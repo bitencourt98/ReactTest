@@ -4,7 +4,7 @@ import "../css/modal.css";
 import "../css/button.css";
 import "../css/inputHead.css";
 
-const Modal = ({product}) => {
+const Modal = ({product, updateProduct}) => {
   const [inputDescription, setInputDescription] = useState(null);
   const [inputCurrency, setInputCurrency] = useState(null);
 
@@ -13,7 +13,13 @@ useEffect (() => {
     console.log(product);
     setInputDescription(product.description);
     setInputCurrency(product.price);
-  },[]) 
+  },[])
+
+  const update = () => {
+    product.description = inputDescription;
+    product.price = inputCurrency;
+    updateProduct(product)
+  } 
 
 
   return (
@@ -49,7 +55,7 @@ useEffect (() => {
           </div>
 
           <div className="flex-button">
-            <button className="button">Atualiza</button>
+            <button onClick={update} className="button">Atualiza</button>
           </div>
         </div>
       </div>

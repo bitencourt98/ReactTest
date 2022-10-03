@@ -10,7 +10,7 @@ const Products = ({products, handleProductRemove, handleProductUpdate}) => {
         <>
             <table className="table">
                 <tbody>
-                    {products.map(product => <Product product={product} handleProductRemove={handleProductRemove} handleProductUpdate={handleProductUpdate}/>)}
+                    {products.map(product => <Product key={product.id} product={product} handleProductRemove={handleProductRemove} handleProductUpdate={handleProductUpdate}/>)}
                 </tbody>
             </table>
         </>

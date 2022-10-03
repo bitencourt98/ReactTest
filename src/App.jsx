@@ -48,21 +48,35 @@ const App = () => {
   const handleProductRemove = (prodId) => {
     console.log(prodId);
     const updateProdList = products.filter( product => product.id !== prodId);
-
+    
     setProducts(updateProdList);
   }
-
+  
   const handleProductUpdate = (product) => {
     setValuesModal(product);
     setOpenModal(true);
   }
+  
+  const updateProduct = (prod) =>{
 
-  // const [valu]
+    let updateProdList = [...products]
+
+    updateProdList.forEach(element => {
+      if (element.id === prod.id){
+        element.description = prod.description;
+        element.price = prod.price;
+      }
+    });
+    
+    setProducts(updateProdList);
+
+    setOpenModal(false);
+  }
 
   return (
     <>
       {
-        isOpenModal ? <Modal product = {valuesModal} /> : null
+        isOpenModal ? <Modal product = {valuesModal} updateProduct={updateProduct} /> : null
       }
       <div className="formContainer">
         <div>
