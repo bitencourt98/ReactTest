@@ -1,0 +1,32 @@
+.modal{
+    width: 450px;
+    min-height: 250px;
+    padding: 40px;
+    
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.modal-container{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0 , 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+}
+
+.input-text{
+    font-size: 18px;
+    padding: 10px;
+}
+
+.flex-button{
+    display: flex;
+    justify-content: center;
+}

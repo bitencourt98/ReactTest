@@ -5,6 +5,7 @@ import InputHead from "./component/InputHead";
 import "./App.css"
 import "./css/form-container.css";
 import Products from "./component/Products";
+import Modal from "./component/Modal";
 
 const App = () => {
 
@@ -45,10 +46,19 @@ const App = () => {
   }
   const handleProductRemove = (prodId) => {
     console.log(prodId);
+    const updateProdList = products.filter( product => product.id !== prodId);
+
+    setProducts(updateProdList);
   }
+
+  const handleProductUpdate = (prodId, description) => {
+    // const updateProdList = products.filter( );
+  }
+  // return ();
 
   return (
     <>
+      <Modal />
       <div className="formContainer">
         <div>
           <InputHead className="upperContainer" handleProductAdd={handleProductAdd}/>

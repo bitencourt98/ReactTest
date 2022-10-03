@@ -12,6 +12,7 @@ const Product = ({ product, handleProductRemove }) => {
   
   const editProduct = (id) => {
     console.log('edit product with id:'+product.id);
+    // handleProductUpdate
   }
 
   return (

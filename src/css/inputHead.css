@@ -1,4 +1,8 @@
-.inputHead {
+.input-modal{
+  margin: 10px 0px;
+  width: 90%;
+  height: 35px;
+  font-size: 16px;
 }
 
 .input {
@@ -6,7 +10,6 @@
     width: 30%;
     font-size: 1rem;
     padding: 7px;
-
 }
 
 input::-webkit-outer-spin-button,
