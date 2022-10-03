@@ -4,13 +4,12 @@ import "../css/modal.css";
 import "../css/button.css";
 import "../css/inputHead.css";
 
-const Modal = ({product, updateProduct}) => {
+const Modal = ({product, updateProduct, closeModal}) => {
   const [inputDescription, setInputDescription] = useState(null);
   const [inputCurrency, setInputCurrency] = useState(null);
 
 
 useEffect (() => {
-    console.log(product);
     setInputDescription(product.description);
     setInputCurrency(product.price);
   },[])
@@ -26,6 +25,8 @@ useEffect (() => {
     <>
       <div className="modal-container">
         <div className="modal">
+        <button onClick={closeModal} className="close-button">X</button>
+        <br/>
           <div className="input-text">
             <span>Descricao</span>
             <input

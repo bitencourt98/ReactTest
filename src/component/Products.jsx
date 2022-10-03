@@ -5,7 +5,6 @@ import "../css/product-list.css";
 
 
 const Products = ({products, handleProductRemove, handleProductUpdate}) => {
-    console.log(products);
     return ( 
         <>
             <table className="table">

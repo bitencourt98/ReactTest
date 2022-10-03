@@ -36,3 +36,20 @@
     height: 5px;
     float: right;
 }
+
+.close-button{
+    float: right;
+    background-color: #730FC3;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+
+    margin: 5px;
+    padding: 8px;
+    border: 0px solid purple;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}

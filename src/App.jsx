@@ -72,11 +72,15 @@ const App = () => {
 
     setOpenModal(false);
   }
+  
+  const closeModal = () =>{
+    setOpenModal(false);
+  }
 
   return (
     <>
       {
-        isOpenModal ? <Modal product = {valuesModal} updateProduct={updateProduct} /> : null
+        isOpenModal ? <Modal product = {valuesModal} updateProduct={updateProduct} closeModal={closeModal}/> : null
       }
       <div className="formContainer">
         <div>
