@@ -89,6 +89,9 @@ const App = () => {
         isOpenModal ? <Modal product = {valuesModal} updateProduct={updateProduct} closeModal={closeModal}/> : null
       }
       <div className="formContainer">
+        <div className="titulo-container">
+          <h1>Cadastro de Produtos</h1>
+        </div>
         <div>
           <InputHead className="upperContainer" handleProductAdd={handleProductAdd}/>
         </div>
