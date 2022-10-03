@@ -1,12 +1,18 @@
 import React from 'react';
 
 import Product from './Product';
+import "../css/product-list.css";
 
-const Products = ({products}) => {
+
+const Products = ({products, handleProductRemove}) => {
     console.log(products);
     return ( 
         <>
-            {products.map(product => <Product product={product} />)}
+            <table className="table">
+                <tbody>
+                    {products.map(product => <Product product={product} handleProductRemove={handleProductRemove}/>)}
+                </tbody>
+            </table>
         </>
      );
 }
